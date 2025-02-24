@@ -4,10 +4,7 @@ import plotly.express as px
 import joblib
 import numpy as np
 import os
-
-import os
-import pandas as pd
-import streamlit as st
+import joblib
 
 # Load dataset using relative path
 @st.cache_data
@@ -27,9 +24,10 @@ def load_data():
 df = load_data()
 
 
-# Load trained model and scaler
-xgb_model = joblib.load("xgboost_churn_model.pkl")
-scaler = joblib.load("scaler.pkl")
+model_path = os.path.join(os.path.dirname(__file__), "xgboost_churn_model.pkl")
+
+xgb_model = joblib.load(model_path)
+
 
 # Language Selection
 language = st.sidebar.radio("🌍 Select Language / اختر اللغة:", ["English", "العربية"])

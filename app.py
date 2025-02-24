@@ -3,6 +3,14 @@ import pandas as pd
 import plotly.express as px
 import joblib
 import numpy as np
+import os
+
+# الحصول على المسار الصحيح للملف داخل المجلد الحالي
+file_path = os.path.join(os.getcwd(), "WA_Fn-UseC_-Telco-Customer-Churn.csv")
+
+# تحميل البيانات
+df = pd.read_csv(file_path)
+
 
 # Load dataset
 @st.cache_data

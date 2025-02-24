@@ -63,6 +63,7 @@ if page in ["📊 Data Overview", "📊 نظرة عامة على البيانا�
     uploaded_file = st.file_uploader("Upload an image for the project", type=["png", "jpg", "jpeg"])
     if uploaded_file is not None:
         st.image(uploaded_file, caption="Customer Churn Analysis Dashboard", use_container_width=True)
+        st.image("https://raw.githubusercontent.com/abedahdy500/abedahdy500--Customer-Churn-Analysis_app/main/customer_churn_analysis.png", caption="Customer Churn Analysis")
     
     # Project Objective
     st.subheader("Project Objective" if language == "English" else "هدف المشروع")

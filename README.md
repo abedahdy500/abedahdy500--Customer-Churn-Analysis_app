@@ -1,4 +1,4 @@
-# abedahdy500--Customer-Churn-Analysis_app
+Customer-Churn-Analysis_app
 📌 Project Description
 This project aims to analyze customer churn in the telecommunications sector using machine learning techniques. The analysis is based on a dataset containing customer information such as subscription duration, service type, payments, and usage.
 

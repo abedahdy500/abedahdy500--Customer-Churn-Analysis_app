@@ -64,7 +64,7 @@ if page in ["📊 Data Overview", "📊 نظرة عامة على البيانا�
     "https://raw.githubusercontent.com/abedahdy500/abedahdy500--Customer-Churn-Analysis_app/main/customer_churn_analysis.png",
     caption="Customer Churn Analysis Dashboard",
     use_container_width=True
-    
+    )
     # Project Objective
     st.subheader("Project Objective" if language == "English" else "هدف المشروع")
     st.write("This dashboard provides insights into customer churn in the telecom industry, analyzing various factors affecting retention and suggesting strategies to reduce churn." if language == "English" else "يقدم هذا اللوحة رؤى حول فقدان العملاء في صناعة الاتصالات، من خلال تحليل العوامل المختلفة التي تؤثر على الاحتفاظ بالعملاء واقتراح استراتيجيات لتقليل الفقدان.")

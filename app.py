@@ -34,6 +34,10 @@ language = st.sidebar.radio("🌍 Select Language / اختر اللغة:", ["Eng
 
 # Sidebar navigation
 st.sidebar.title("🔍 Churn Analysis Dashboard")
+# Project Objective
+st.subheader("Project Objective" if language == "English" else "هدف المشروع")
+st.write("This dashboard provides insights into customer churn in the telecom industry, analyzing various factors affecting retention and suggesting strategies to reduce churn." if language == "English" else "يقدم هذا اللوحة رؤى حول فقدان العملاء في صناعة الاتصالات، من خلال تحليل العوامل المختلفة التي تؤثر على الاحتفاظ بالعملاء واقتراح استراتيجيات لتقليل الفقدان.")
+
 if language == "English":
     page = st.sidebar.radio("Select Analysis:", [
         "📊 Data Overview",
@@ -65,9 +69,6 @@ if page in ["📊 Data Overview", "📊 نظرة عامة على البيانا�
     caption="Customer Churn Analysis Dashboard",
     use_container_width=True
     )
-    # Project Objective
-    st.subheader("Project Objective" if language == "English" else "هدف المشروع")
-    st.write("This dashboard provides insights into customer churn in the telecom industry, analyzing various factors affecting retention and suggesting strategies to reduce churn." if language == "English" else "يقدم هذا اللوحة رؤى حول فقدان العملاء في صناعة الاتصالات، من خلال تحليل العوامل المختلفة التي تؤثر على الاحتفاظ بالعملاء واقتراح استراتيجيات لتقليل الفقدان.")
     
     st.dataframe(df.head())
 

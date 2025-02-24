@@ -5,22 +5,27 @@ import joblib
 import numpy as np
 import os
 
-# الحصول على المسار الصحيح للملف داخل المجلد الحالي
-file_path = os.path.join(os.getcwd(), "WA_Fn-UseC_-Telco-Customer-Churn.csv")
+import os
+import pandas as pd
+import streamlit as st
 
-# تحميل البيانات
-df = pd.read_csv(file_path)
-
-
-# Load dataset
+# Load dataset using relative path
 @st.cache_data
 def load_data():
-    df = pd.read_csv("/content/WA_Fn-UseC_-Telco-Customer-Churn.csv")  # Replace with your actual dataset
-    df.dropna(inplace=True)  # Remove missing values
+    # تحديد مسار الملف في نفس مجلد `app.py`
+    file_path = os.path.join(os.path.dirname(__file__), "WA_Fn-UseC_-Telco-Customer-Churn.csv")
+    
+    
+    df = pd.read_csv(file_path)
+    
+   
+    df.dropna(inplace=True)
+    
     return df
 
-# Load data
+
 df = load_data()
+
 
 # Load trained model and scaler
 xgb_model = joblib.load("xgboost_churn_model.pkl")

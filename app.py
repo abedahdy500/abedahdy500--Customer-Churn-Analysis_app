@@ -60,8 +60,10 @@ if page in ["📊 Data Overview", "📊 نظرة عامة على البيانا�
     st.title("📊 Customer Churn Analysis" if language == "English" else "📊 تحليل فقدان العملاء")
     
     # Upload project image
-   st.image("https://raw.githubusercontent.com/abedahdy500/abedahdy500--Customer-Churn-Analysis_app/main/customer_churn_analysis.png", 
-         caption="Customer Churn Analysis Dashboard", use_container_width=True)
+    st.image(
+    "https://raw.githubusercontent.com/abedahdy500/abedahdy500--Customer-Churn-Analysis_app/main/customer_churn_analysis.png",
+    caption="Customer Churn Analysis Dashboard",
+    use_container_width=True
     
     # Project Objective
     st.subheader("Project Objective" if language == "English" else "هدف المشروع")

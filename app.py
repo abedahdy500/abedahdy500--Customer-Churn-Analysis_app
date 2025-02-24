@@ -24,7 +24,7 @@ def load_data():
 df = load_data()
 
 
-model_path = os.path.join(os.path.dirname(__file__), "xgboost_churn_model.pkl")
+model_path = os.path.join(os.path.dirname(__file__), "xgboost_churn_model (1).pkl")
 
 xgb_model = joblib.load(model_path)
 

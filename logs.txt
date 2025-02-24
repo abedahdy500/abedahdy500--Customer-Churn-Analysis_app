@@ -1,3 +1,9 @@
+pandas
+numpy
+scikit-learn
+xgboost
+streamlit
+plotly
 
 Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
 
